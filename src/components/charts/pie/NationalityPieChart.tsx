@@ -20,6 +20,7 @@ const NationalityPieChart = (): ReactElement => {
 			arcLabelsTextColor="#FFF"
 			arcLinkLabelsColor={{ from: "color" }}
 			arcLinkLabelsSkipAngle={10}
+			arcLinkLabelsStraightLength={10}
 			arcLinkLabelsTextColor="#333333"
 			arcLinkLabelsThickness={2}
 			borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
@@ -28,8 +29,8 @@ const NationalityPieChart = (): ReactElement => {
 			cornerRadius={3}
 			data={data}
 			innerRadius={0.5}
-			margin={{ top: 40, right: 150, bottom: 80, left: 80 }}
-			padAngle={0.7}
+			margin={{ top: 10, right: 100, bottom: 10, left: 80 }}
+			padAngle={1.5}
 			role="application"
 			tooltip={({ datum }) => (
 				<div className="bg-white px-2 py-3 border border-slate-200 rounded-md">
@@ -46,14 +47,14 @@ const NationalityPieChart = (): ReactElement => {
 			// 		direction: "row",
 			// 		justify: false,
 			// 		translateX: 0,
-			// 		translateY: 56,
+			// 		translateY: 40,
 			// 		itemsSpacing: 0,
-			// 		itemWidth: 100,
+			// 		itemWidth: 80,
 			// 		itemHeight: 18,
 			// 		itemTextColor: "#999",
 			// 		itemDirection: "left-to-right",
 			// 		itemOpacity: 1,
-			// 		symbolSize: 18,
+			// 		symbolSize: 10,
 			// 		symbolShape: "circle",
 			// 	},
 			// ]}

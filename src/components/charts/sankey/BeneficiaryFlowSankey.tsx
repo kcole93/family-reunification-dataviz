@@ -24,34 +24,32 @@ const BeneficiaryFlowSankey = () => {
 	};
 
 	return (
-		<div className="h-[600px] w-full">
-			<ResponsiveSankey
-				enableLinkGradient
-				align="justify"
-				colors={{ scheme: "category10" }}
-				data={data}
-				labelOrientation="horizontal"
-				labelPadding={16}
-				labelPosition="outside"
-				linkContract={3}
-				linkHoverOthersOpacity={0.1}
-				linkOpacity={0.5}
-				margin={{ top: 40, right: 160, bottom: 40, left: 90 }}
-				nodeBorderWidth={0}
-				nodeHoverOthersOpacity={0.35}
-				nodeOpacity={1}
-				nodeSpacing={24}
-				nodeThickness={18}
-				labelTextColor={{
-					from: "color",
-					modifiers: [["darker", 1]],
-				}}
-				nodeBorderColor={{
-					from: "color",
-					modifiers: [["darker", 0.8]],
-				}}
-			/>
-		</div>
+		<ResponsiveSankey
+			enableLinkGradient
+			align="justify"
+			colors={{ scheme: "category10" }}
+			data={data}
+			labelOrientation="horizontal"
+			labelPadding={16}
+			labelPosition="outside"
+			linkContract={3}
+			linkHoverOthersOpacity={0.1}
+			linkOpacity={0.5}
+			margin={{ top: 40, right: 120, bottom: 40, left: 40 }}
+			nodeBorderWidth={0}
+			nodeHoverOthersOpacity={0.35}
+			nodeOpacity={1}
+			nodeSpacing={5}
+			nodeThickness={18}
+			labelTextColor={{
+				from: "color",
+				modifiers: [["darker", 1]],
+			}}
+			nodeBorderColor={{
+				from: "color",
+				modifiers: [["darker", 0.8]],
+			}}
+		/>
 	);
 };
 

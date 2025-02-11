@@ -40,24 +40,24 @@ const SponsorRelationshipPie = () => {
 				activeOuterRadiusOffset={8}
 				arcLabel={(d) => `${d.data.count}`}
 				arcLabelsSkipAngle={10}
-				arcLabelsTextColor="white"
-				arcLinkLabel={(d) => `${d.label} ${d.value}%`}
+				arcLabelsTextColor="#FFF"
 				arcLinkLabelsColor={{ from: "color" }}
-				arcLinkLabelsDiagonalLength={20}
 				arcLinkLabelsSkipAngle={10}
-				arcLinkLabelsStraightLength={20}
+				arcLinkLabelsStraightLength={4}
 				arcLinkLabelsTextColor="#333333"
-				arcLinkLabelsTextOffset={12}
 				arcLinkLabelsThickness={2}
+				arcLinkLabel={(d) => `${d.label} ${d.value}%`}
+				arcLinkLabelsDiagonalLength={6}
+				arcLinkLabelsTextOffset={6}
 				borderWidth={0}
 				colors={{ scheme: "tableau10" }}
-				cornerRadius={0}
+				cornerRadius={3}
 				data={data}
-				innerRadius={0}
-				margin={{ top: 40, right: 80, bottom: 40, left: 80 }}
-				padAngle={0}
+				innerRadius={0.5}
+				margin={{ top: 20, right: 90, bottom: 20, left: 90 }}
+				padAngle={1.5}
 				tooltip={({ datum }) => (
-					<div className="bg-white px-2 py-3 border-slate-200 rounded-md">
+					<div className="bg-white px-2 py-3 border border-slate-200 rounded-md">
 						<strong>{datum.id}</strong>
 						<br />
 						Count: {datum.data.count}

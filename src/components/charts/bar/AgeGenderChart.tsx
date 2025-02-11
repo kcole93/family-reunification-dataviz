@@ -17,7 +17,7 @@ const AgeGenderChart = (): ReactElement => (
 		labelSkipWidth={12}
 		labelTextColor={"#FFF"}
 		legendLabel={(d) => toTitleCase(String(d.id))}
-		margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+		margin={{ top: 10, right: 45, bottom: 40, left: 45 }}
 		padding={0.3}
 		role="application"
 		tooltipLabel={(d) => toTitleCase(String(d.id))}
@@ -46,32 +46,32 @@ const AgeGenderChart = (): ReactElement => (
 			{ ageGroup: "10-15", female: 8, male: 17, nonbinary: 1 },
 			{ ageGroup: "16-17", female: 2, male: 17, nonbinary: 0 },
 		]}
-		legends={[
-			{
-				dataFrom: "keys",
-				anchor: "right",
-				direction: "column",
-				justify: false,
-				translateX: 120,
-				translateY: 0,
-				itemsSpacing: 2,
-				itemWidth: 100,
-				itemHeight: 20,
-				itemDirection: "left-to-right",
-				itemOpacity: 0.85,
-				symbolSize: 20,
-				itemTextColor: "#000",
-				effects: [
-					{
-						on: "hover",
-						style: {
-							itemTextColor: "#000",
-							itemOpacity: 1,
-						},
-					},
-				],
-			},
-		]}
+		// legends={[
+		// 	{
+		// 		dataFrom: "keys",
+		// 		anchor: "right",
+		// 		direction: "column",
+		// 		justify: false,
+		// 		translateX: 90,
+		// 		translateY: 0,
+		// 		itemsSpacing: 2,
+		// 		itemWidth: 80,
+		// 		itemHeight: 20,
+		// 		itemDirection: "left-to-right",
+		// 		itemOpacity: 0.85,
+		// 		symbolSize: 20,
+		// 		itemTextColor: "#000",
+		// 		effects: [
+		// 			{
+		// 				on: "hover",
+		// 				style: {
+		// 					itemTextColor: "#000",
+		// 					itemOpacity: 1,
+		// 				},
+		// 			},
+		// 		],
+		// 	},
+		// ]}
 	/>
 );
 

@@ -56,7 +56,7 @@ const ProtectiveStatusChart = (): ReactElement => {
 				labelSkipHeight={12}
 				labelSkipWidth={12}
 				labelTextColor="#FFF"
-				margin={{ top: 50, right: 20, bottom: 60, left: 60 }}
+				margin={{ top: 50, right: 0, bottom: 60, left: 45 }}
 				padding={0.3}
 				role="application"
 				valueScale={{ type: "linear" }}

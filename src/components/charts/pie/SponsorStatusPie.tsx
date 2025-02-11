@@ -43,19 +43,19 @@ const SponsorStatusPie = () => {
 				arcLabelsTextColor="white"
 				arcLinkLabel={(d) => `${d.label} ${d.value}%`}
 				arcLinkLabelsColor={{ from: "color" }}
-				arcLinkLabelsDiagonalLength={20}
+				arcLinkLabelsDiagonalLength={4}
 				arcLinkLabelsSkipAngle={10}
-				arcLinkLabelsStraightLength={20}
+				arcLinkLabelsStraightLength={2}
 				arcLinkLabelsTextColor="#333333"
-				arcLinkLabelsTextOffset={12}
+				arcLinkLabelsTextOffset={2}
 				arcLinkLabelsThickness={2}
 				borderWidth={0}
 				colors={{ scheme: "tableau10" }}
-				cornerRadius={0}
+				cornerRadius={3}
 				data={data}
-				innerRadius={0}
-				margin={{ top: 40, right: 80, bottom: 40, left: 80 }}
-				padAngle={0}
+				innerRadius={0.5}
+				margin={{ top: 20, right: 100, bottom: 20, left: 100 }}
+				padAngle={1.5}
 				tooltip={({ datum }) => (
 					<div
 						style={{
@@ -74,18 +74,18 @@ const SponsorStatusPie = () => {
 				)}
 				// legends={[
 				// 	{
-				// 		anchor: "right",
+				// 		anchor: "bottom",
 				// 		direction: "column",
 				// 		justify: false,
-				// 		translateX: 70,
+				// 		translateX: 0,
 				// 		translateY: 0,
-				// 		itemsSpacing: 5,
+				// 		itemsSpacing: 6,
 				// 		itemWidth: 100,
-				// 		itemHeight: 18,
+				// 		itemHeight: 10,
 				// 		itemTextColor: "#333",
 				// 		itemDirection: "left-to-right",
 				// 		itemOpacity: 1,
-				// 		symbolSize: 18,
+				// 		symbolSize: 10,
 				// 		symbolShape: "circle",
 				// 	},
 				// ]}

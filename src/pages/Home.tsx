@@ -160,12 +160,12 @@ export const Home = (): ReactElement => {
 				<section
 					className={`grid grid-cols-1 2xl:grid-cols-2 gap-12 transition-opacity duration-500 mb-12`}
 				>
-					<Card className="w-full h-600px] 2xl:h-[400px]">
+					<Card className="w-full">
 						<CardHeader>
 							<CardTitle>Nationality Distribution</CardTitle>
 						</CardHeader>
 						<CardContent>
-							<div className="h-[600px] 2xl:h-[400px]">
+							<div className="relative w-full aspect-square md:aspect-auto md:h-96">
 								<NationalityPieChart />
 							</div>
 						</CardContent>
@@ -197,12 +197,12 @@ export const Home = (): ReactElement => {
 							somewhat higher at 15, compared to 13 among female beneficiaries.
 						</p>
 					</div>
-					<Card className="mb-8 w-full h-[700px] 2xl:h-[500px]">
+					<Card className="mb-8 w-full">
 						<CardHeader>
 							<CardTitle>Age and Gender Distribution</CardTitle>
 						</CardHeader>
 						<CardContent>
-							<div className="h-[600px] 2xl:h-[400px]">
+							<div className="relative w-full aspect-square md:aspect-auto md:h-96">
 								<AgeGenderChart />
 							</div>
 						</CardContent>
@@ -250,8 +250,8 @@ export const Home = (): ReactElement => {
 					<CardHeader>
 						<CardTitle>Protective Status of Beneficiaries</CardTitle>
 					</CardHeader>
-					<CardContent className="flex">
-						<div className="flex-grow min-h-[400px]">
+					<CardContent>
+						<div className="relative aspect-square md:aspect-auto md:h-96">
 							<ProtectiveStatusChart />
 						</div>
 					</CardContent>
@@ -282,51 +282,53 @@ export const Home = (): ReactElement => {
 							<h3 className="text-xl font-bold my-4">
 								Sponsor and Beneficiary Elegibility
 							</h3>
-							<div className="">
-								<div className="border-collapse">
-									<div className="flex">
-										<button
-											className={`p-3 mr-1 rounded-t-xl transition-colors duration-200 inset-shadow-sm
+						</div>
+						<div className="w-full">
+							<div className="border-collapse">
+								<div className="flex">
+									<button
+										className={`p-3 mr-1 rounded-t-xl transition-colors duration-200 inset-shadow-sm
               ${
 								activeTab === 0
 									? "bg-slate-300 text-gray-600 border-neutral-200"
 									: "text-gray-600 hover:text-gray-800 bg-gray-100 border-neutral-200 hover:bg-slate-200"
 							}`}
-											onClick={() => {
-												setActiveTab(0);
-											}}
-										>
-											Relationship to Sponsor
-										</button>
-										<button
-											className={`p-3 rounded-t-xl transition-colors duration-200 inset-shadow-sm
+										onClick={() => {
+											setActiveTab(0);
+										}}
+									>
+										Relationship to Sponsor
+									</button>
+									<button
+										className={`p-3 rounded-t-xl transition-colors duration-200 inset-shadow-sm
 								${
 									activeTab === 1
 										? "bg-slate-300 text-gray-600 border-neutral-200"
 										: "text-gray-600 hover:text-gray-800 bg-gray-100 border-neutral-200 hover:bg-slate-200"
 								}`}
-											onClick={() => {
-												setActiveTab(1);
-											}}
-										>
-											Status of Sponsor in Destination Country
-										</button>
-									</div>
-								</div>
-
-								<div className="rounded-xl rounded-tl-none border border-neutral-200 bg-white text-neutral-950 shadow p-12">
-									{activeTab === 0 && (
-										<div className="flex-grow">
-											<SponsorRelationshipPie />
-										</div>
-									)}
-									{activeTab === 1 && (
-										<div className="flex-grow">
-											<SponsorStatusPie />
-										</div>
-									)}
+										onClick={() => {
+											setActiveTab(1);
+										}}
+									>
+										Status of Sponsor in Destination Country
+									</button>
 								</div>
 							</div>
+
+							<div className="rounded-xl rounded-tl-none rounded-tr-none sm:rounded-tr-xl border border-neutral-200 bg-white text-neutral-950 shadow p-2">
+								{activeTab === 0 && (
+									<div className="relative w-full aspect-square md:aspect-auto md:h-96">
+										<SponsorRelationshipPie />
+									</div>
+								)}
+								{activeTab === 1 && (
+									<div className="relative w-full aspect-square md:aspect-auto md:h-96">
+										<SponsorStatusPie />
+									</div>
+								)}
+							</div>
+						</div>
+						<div className="max-w-[80ch] space-y-8">
 							<p>
 								Eligibility and requirements for sponsoring the reunification of
 								family members depends on the sponsor’s country of residence,
@@ -465,12 +467,12 @@ export const Home = (): ReactElement => {
 							</p>
 						</div>
 					</div>
-					<Card className="my-8 w-full h-[700px]">
+					<Card className="my-8 w-full">
 						<CardHeader>
 							<CardTitle>Case Outcomes</CardTitle>
 						</CardHeader>
 						<CardContent>
-							<div className="h-[800px] 2xl:h-[600px]">
+							<div className="relative aspect-auto h-screen md:h-96">
 								<BeneficiaryFlowSankey />
 							</div>
 						</CardContent>
